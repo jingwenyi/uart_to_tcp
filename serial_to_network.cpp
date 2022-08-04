@@ -90,6 +90,7 @@
 	if(cfsetspeed(&new_cfg, rate) < 0)
 	{
 		printf("cfsetispeed error %s\n", baudrate);
+		return -1;
 	}
 
 	new_cfg.c_cflag &= ~CSIZE;
